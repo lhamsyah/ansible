@@ -11,8 +11,9 @@
    - start nginx
 
 - name: Copy nginx configuration
-  template: src=default.conf dest=/etc/nginx/sites-enabled/default
-  notify: restart nginx
+  template: 
+   src : default.conf
+   dest : /etc/nginx/sites-enabled/default
 
 - name: Copy web html
   template: src=index.html dest=/var/www/html/index.html
