@@ -1,5 +1,7 @@
 ---
 - name: Install Nginx with ansible
-  hosts: web
+  hosts: client
+  user : ubuntu
+  sudo : yes
   roles:
      - nginx
